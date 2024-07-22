@@ -42,8 +42,8 @@ export function ChatPanel({
     },
     {
       heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      subheading: 'Scrap HMS1&2 right now?',
+      message: 'What is the price of HMS1&2 right now?'
     },
     {
       heading: 'I would like to buy',
