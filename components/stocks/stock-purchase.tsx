@@ -36,7 +36,7 @@ export function Purchase({
     // Insert a hidden history info to the list.
     const message = {
       role: 'system' as const,
-      content: `[User has changed to purchase ${newValue} shares of ${name}. Total cost: $${(
+      content: `[User has changed to purchase €{newValue} shares of €{name}. Total cost: €€{(
         newValue * price
       ).toFixed(2)}]`,
 
@@ -65,7 +65,7 @@ export function Purchase({
         +1.23% ↑
       </div>
       <div className="text-lg text-zinc-300">{symbol}</div>
-      <div className="text-3xl font-bold">${price}</div>
+      <div className="text-3xl font-bold">€{price}</div>
       {purchasingUI ? (
         <div className="mt-4 text-zinc-200">{purchasingUI}</div>
       ) : status === 'requires_action' ? (
@@ -101,14 +101,14 @@ export function Purchase({
               <div className="flex flex-col basis-1/3 tabular-nums sm:basis-auto sm:flex-row sm:items-center sm:gap-2">
                 {value}
                 <span className="mb-1 text-sm font-normal text-zinc-600 sm:mb-0 dark:text-zinc-400">
-                  shares
+                  Tons
                 </span>
               </div>
               <div className="text-center basis-1/3 sm:basis-auto">×</div>
               <span className="flex flex-col basis-1/3 tabular-nums sm:basis-auto sm:flex-row sm:items-center sm:gap-2">
-                ${price}
+                €{price}
                 <span className="mb-1 ml-1 text-sm font-normal text-zinc-600 sm:mb-0 dark:text-zinc-400">
-                  per share
+                  per Tons
                 </span>
               </span>
               <div className="pt-2 mt-2 text-center border-t basis-full border-t-zinc-700 sm:mt-0 sm:basis-auto sm:border-0 sm:pt-0 sm:text-left">
@@ -135,7 +135,7 @@ export function Purchase({
         </>
       ) : status === 'completed' ? (
         <p className="mb-2 text-white">
-          You have successfully purchased {value} ${symbol}. Total cost:{' '}
+          You have successfully purchased {value} €{symbol}. Total cost:{' '}
           {formatNumber(value * price)}
         </p>
       ) : status === 'expired' ? (
