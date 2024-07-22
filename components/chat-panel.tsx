@@ -47,8 +47,8 @@ export function ChatPanel({
     },
     {
       heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      subheading: '50 Tons of Rebar',
+      message: `I would like to buy 50 Tons of Rebar`
     },
     {
       heading: 'What are some',
