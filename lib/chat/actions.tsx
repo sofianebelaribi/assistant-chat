@@ -146,7 +146,8 @@ async function submitUserMessage(content: string) {
     If you want to show events, call \`get_events\`.
     If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
     
-    Besides that, you can also chat with users and do some calculations if needed.`,
+    Besides that, you can also chat with users and do some calculations if needed.
+    Today is 24th of July 2024.`,
     messages: [
       ...aiState.get().messages.map((message: any) => ({
         role: message.role,
